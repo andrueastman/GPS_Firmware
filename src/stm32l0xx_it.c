@@ -1,12 +1,12 @@
 /**
-  ******************************************************************************
-  * @file    stm32l0xx_it.c
-  * @author  Ac6
-  * @version V1.0
-  * @date    02-Feb-2015
-  * @brief   Default Interrupt Service Routines.
-  ******************************************************************************
-*/
+ ******************************************************************************
+ * @file    stm32l0xx_it.c
+ * @author  Ac6
+ * @version V1.0
+ * @date    02-Feb-2015
+ * @brief   Default Interrupt Service Routines.
+ ******************************************************************************
+ */
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l0xx_hal.h"
@@ -29,12 +29,11 @@ extern UART_HandleTypeDef UartHandle;
 /******************************************************************************/
 
 /**
-  * @brief  This function handles SysTick Handler, but only if no RTOS defines it.
-  * @param  None
-  * @retval None
-  */
-void SysTick_Handler(void)
-{
+ * @brief  This function handles SysTick Handler, but only if no RTOS defines it.
+ * @param  None
+ * @retval None
+ */
+void SysTick_Handler(void) {
 	HAL_IncTick();
 	HAL_SYSTICK_IRQHandler();
 #ifdef USE_RTOS_SYSTICK
@@ -42,15 +41,13 @@ void SysTick_Handler(void)
 #endif
 }
 
-
 /**
-  * @brief  This function handles UART interrupt request.
-  * @param  None
-  * @retval None
-  * @Note   This function is redefined in "main.h" and related to DMA
-  *         used for USART data transmission
-  */
-void USART1_IRQHandler(void)
-{
-  HAL_UART_IRQHandler(&UartHandle);
+ * @brief  This function handles UART interrupt request.
+ * @param  None
+ * @retval None
+ * @Note   This function is redefined in "main.h" and related to DMA
+ *         used for USART data transmission
+ */
+void USART1_IRQHandler(void) {
+	HAL_UART_IRQHandler(&UartHandle);
 }

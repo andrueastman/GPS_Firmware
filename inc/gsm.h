@@ -14,5 +14,4 @@
 void gsm_init();
 void gsm_tick();
 
-
 #endif /* GSM_H_ */

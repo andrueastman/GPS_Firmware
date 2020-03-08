@@ -21,7 +21,8 @@ extern uint8_t aRxBuffer[RXBUFFERSIZE];
 /*
  *	FUNCTION PROTOTYPES
  */
-void uart_gsm_init( void );
-void uart_gsm_send(uint8_t * tx_buffer, uint16_t length ,uint16_t receive_length);
+void uart_gsm_init(void);
+void uart_gsm_send(uint8_t * tx_buffer, uint16_t length,
+		uint16_t receive_length);
 
 #endif /* UART_GSM_H_ */
